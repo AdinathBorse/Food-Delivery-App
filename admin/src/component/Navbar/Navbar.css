@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+.navbar .logo{
+    width: max(10%,80px);
+    margin-top: 10px;
+}
+.navbar .profile{
+    width: 40px;
+}
+.navbar h3{
+    margin-right: 20px;
+    color: #5e3333;
+}

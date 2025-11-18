@@ -1,0 +1,67 @@
+.login-popup{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-color: #00000090;
+}
+.l-p-c{
+    place-self: center;
+    width: max(23vw ,300px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 15px;
+    animation: fadeIn 0.5s;
+    font-size: 14px;
+}
+.l-p-title{
+    color: black;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.l-p-title img{
+    width: 15px;
+    cursor: pointer;
+}
+.i-p-input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.i-p-input input{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    
+}
+.l-p-c button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(10, 141, 51);
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.l-p-cond{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+.l-p-cond input{
+    width: max-content;
+    margin-top: 5px;
+}
+.login-popup p span{
+    color: rgb(10, 141, 51);
+    cursor: pointer;
+    font-weight: 500;
+}

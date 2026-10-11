@@ -52,9 +52,23 @@ const List = ({url}) => {
           return(
             <div key={index} className="list-table-format">
               <img src={`${url}/images/`+item.image} alt="" />
-              <p>{item.name}</p>
+              <div>
+                <p style={{fontWeight: item.isMysteryBag ? "600" : "normal"}}>{item.name}</p>
+                {item.isMysteryBag && (
+                  <span style={{fontSize: "11px", color: "#059669", background: "#ecfdf5", padding: "2px 6px", borderRadius: "4px", display: "inline-block", marginTop: "2px", border: "1px solid #a7f3d0"}}>
+                    🌙 Mystery Bag ({item.dietaryType})
+                  </span>
+                )}
+              </div>
               <p>{item.category}</p>
-              <p>₹{item.price}</p>
+              <p>
+                ₹{item.price}
+                {item.originalPrice > item.price && (
+                  <span style={{fontSize: "12px", color: "#94a3b8", textDecoration: "line-through", marginLeft: "5px"}}>
+                    ₹{item.originalPrice}
+                  </span>
+                )}
+              </p>
               <p onClick={()=>removeFood(item._id)} className='crsr'>X</p>
             </div>
           )

@@ -13,6 +13,7 @@ const FoodDisplay = ({category}) => {
         <h2>Delicious Foods for You</h2>
         <div className="food-item-list">    
             {food_list.map((item,index)=>{
+                if (item.isMysteryBag) return null;
                 // normalize category strings to avoid mismatches from casing/whitespace
                 const cat = (category || "").toString().trim().toLowerCase();
                 const itemCat = (item.category || "").toString().trim().toLowerCase();
